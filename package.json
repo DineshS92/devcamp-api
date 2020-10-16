@@ -1,0 +1,19 @@
+{
+  "name": "devcamper-api",
+  "version": "1.0.0",
+  "description": "Backend Api for Devcamper project",
+  "main": "server.js",
+  "scripts": {
+    "start": "SET NODE_ENV=production&node server",
+    "dev": "nodemon server"
+  },
+  "author": "Dinesh Sadhwani",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
