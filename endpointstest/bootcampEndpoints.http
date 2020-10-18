@@ -36,3 +36,26 @@ Content-Type: application/json
 ###
 
 GET http://localhost:5000/api/v1/bootcamps/radius/02118/10
+
+###
+
+GET http://localhost:5000/api/v1/bootcamps?location.state=MA
+
+###
+GET http://localhost:5000/api/v1/bootcamps?averageCost[gt]=10000
+
+###
+GET http://localhost:5000/api/v1/bootcamps?select=name
+
+###
+GET http://localhost:5000/api/v1/bootcamps?select=name,averageCost,&sort=name,averageCost
+
+###
+GET http://localhost:5000/api/v1/bootcamps?select=name
+
+###
+DELETE http://localhost:5000/api/v1/bootcamps/5d725a037b292f5f8ceff787
+
+
+
+
