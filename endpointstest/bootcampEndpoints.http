@@ -4,9 +4,10 @@ GET http://localhost:5000/api/v1/bootcamps/
 
 POST http://localhost:5000/api/v1/bootcamps
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGQ5ZWZhOTA1NGMzMGE0MDRlZDRjNiIsImlhdCI6MTYwMzEyMjcwMywiZXhwIjoxNjA1NzE0NzAzfQ.N3QC03ysQnLFBGMbqllYJXmg0knbqYiOI1DfLOyE_ms
 
 {
-  "name": "Devcentral Bootcamp",
+  "name": "Devcenter Bootcamp",
 		"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
 		"website": "https://devcentral.com",
 		"phone": "(444) 444-4444",
@@ -39,7 +40,7 @@ GET http://localhost:5000/api/v1/bootcamps/radius/02118/10
 
 ###
 
-GET http://localhost:5000/api/v1/bootcamps?location.state=MA
+GET http://localhost:5000/api/v1/bootcamps?location.state=MA&housing=true
 
 ###
 GET http://localhost:5000/api/v1/bootcamps?averageCost[gt]=10000
@@ -56,6 +57,6 @@ GET http://localhost:5000/api/v1/bootcamps?select=name
 ###
 DELETE http://localhost:5000/api/v1/bootcamps/5d725a037b292f5f8ceff787
 
-
-
+###
+GET http://localhost:5000/api/v1/bootcamps?limit=1&page=2
 

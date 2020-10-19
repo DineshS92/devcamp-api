@@ -12,7 +12,7 @@ POST http://localhost:5000/api/v1/bootcamps/5d713a66ec8f2b88b8f830b8/courses
 Content-Type: application/json
 
  {
-   "title": "UI/UX",
+   "title": "UI/UX-2",
 		"description": "In this course you will learn to create beautiful interfaces. It is a mix of design and development to create modern user experiences on both web and mobile",
 		"weeks": 12,
 		"tuition": 10000,
@@ -32,4 +32,8 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/api/v1/courses/5d725a4a7b292f5f8ceff789
+DELETE http://localhost:5000/api/v1/courses/5f8d1f6d922fce25443a3b7a
+
+###
+
+GET http://localhost:5000/api/v1/courses?limit=2&page=2
