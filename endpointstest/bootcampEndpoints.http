@@ -7,22 +7,22 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGQ5ZWZhOTA1NGMzMGE0MDRlZDRjNiIsImlhdCI6MTYwMzEyMjcwMywiZXhwIjoxNjA1NzE0NzAzfQ.N3QC03ysQnLFBGMbqllYJXmg0knbqYiOI1DfLOyE_ms
 
 {
-  "name": "Devcenter Bootcamp",
-		"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
-		"website": "https://devcentral.com",
-		"phone": "(444) 444-4444",
-		"email": "enroll@devcentral.com",
-		"address": "45 Upper College Rd Kingston RI 02881",
-		"careers": [
+  "name": "Devboy",
+	"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
+	"website": "https://devcentral.com",
+	"phone": "(444) 444-4444",
+	"email": "enroll@devcentral.com",
+	"address": "45 Upper College Rd Kingston RI 02881",
+	"careers": [
 			"Mobile Development",
 			"Web Development",
 			"Data Science",
 			"Business"
 		],
-		"housing": false,
-		"jobAssistance": true,
-		"jobGuarantee": true,
-		"acceptGi": true
+	"housing": false,
+	"jobAssistance": true,
+	"jobGuarantee": true,
+	"acceptGi": true
 }
 
 ###
@@ -56,7 +56,40 @@ GET http://localhost:5000/api/v1/bootcamps?select=name
 
 ###
 DELETE http://localhost:5000/api/v1/bootcamps/5d725a037b292f5f8ceff787
-
 ###
 GET http://localhost:5000/api/v1/bootcamps?limit=1&page=2
+###
 
+DELETE  http://localhost:5000/api/v1/bootcamps/5f8e8aa3e43c5f49c4f1e120
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGU4OWVkZTQzYzVmNDljNGYxZTExZiIsImlhdCI6MTYwMzE3Njk0MSwiZXhwIjoxNjA1NzY4OTQxfQ.30O8P4rbvjNfg9YFR_OvM3b18IvVztZ9vLP95sh4EVo
+###
+
+# Test if publisher can add only one bootycamp - test result: success
+POST http://localhost:5000/api/v1/bootcamps
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGU5NjEyNjFkMzVkMWRiNDU0NTY3NyIsImlhdCI6MTYwMzE4MDA1MCwiZXhwIjoxNjA1NzcyMDUwfQ.AG_LQqnsB5Vse268wObeBFMwAJKUuzt6ux3mGXF-vLY
+
+{
+  "name": "Devboy camp",
+	"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
+	"website": "https://devcentral.com",
+	"phone": "(444) 444-4444",
+	"email": "enroll@devcentral.com",
+	"address": "45 Upper College Rd Kingston RI 02881",
+	"careers": [
+			"Mobile Development",
+			"Web Development",
+			"Data Science",
+			"Business"
+		],
+	"housing": false,
+	"jobAssistance": true,
+	"jobGuarantee": true,
+	"acceptGi": true
+}
+###
+
+
+DELETE http://localhost:5000/api/v1/bootcamps/5f8e971d61d35d1db4545679
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGU5NjEyNjFkMzVkMWRiNDU0NTY3NyIsImlhdCI6MTYwMzE4NDAxMiwiZXhwIjoxNjA1Nzc2MDEyfQ.8r7bhOeOFCeHMqGfja-b-xRGObRpKXnxpVO4ly_hivU

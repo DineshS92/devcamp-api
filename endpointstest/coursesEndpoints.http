@@ -37,3 +37,23 @@ DELETE http://localhost:5000/api/v1/courses/5f8d1f6d922fce25443a3b7a
 ###
 
 GET http://localhost:5000/api/v1/courses?limit=2&page=2
+###
+
+POST http://localhost:5000/api/v1/bootcamps/5f8e96c761d35d1db4545678/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGVhMGViNjFkMzVkMWRiNDU0NTY3YiIsImlhdCI6MTYwMzE4ODU1MSwiZXhwIjoxNjA1NzgwNTUxfQ.DGPsMiwRm0Gyax651XD4ZjNXCUYpjXN4E4swKCaPj8c
+
+{
+  "title": "UI/UX-2",
+	"description": "In this course you will learn to create beautiful interfaces. It is a mix of design and development to create modern user experiences on both web and mobile",
+	"weeks": 12,
+	"tuition": 10000,
+	"minimumSkill": "intermediate",
+	"scholarhipsAvailable": true
+}
+###
+
+
+
+DELETE http://localhost:5000/api/v1/courses/5f8eb8981a032c306c5cef57
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGU5NjEyNjFkMzVkMWRiNDU0NTY3NyIsImlhdCI6MTYwMzE4OTEzOSwiZXhwIjoxNjA1NzgxMTM5fQ.i-vSIcqPOsGukG3TnxLIQQT3_cwigHv4SlnUxQes_UI

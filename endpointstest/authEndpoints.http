@@ -2,12 +2,11 @@ POST http://localhost:5000/api/v1/auth/register
 Content-Type: application/json
 
 {
-  "name": "test",
-		"email": "test@gmail.com",
+  "name": "regular-ass user",
+		"email": "basic@gmail.com",
 		"role": "publisher",
 		"password": "123456"
 }
-
 ###
 
 POST http://localhost:5000/api/v1/auth/login
@@ -16,4 +15,38 @@ Content-Type: application/json
 {
 		"email": "test@gmail.com",
 		"password": "123456"
+}
+
+###
+
+GET http://localhost:5000/api/v1/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOGQ5ZWZhOTA1NGMzMGE0MDRlZDRjNiIsImlhdCI6MTYwMzEyMjcwMywiZXhwIjoxNjA1NzE0NzAzfQ.N3QC03ysQnLFBGMbqllYJXmg0knbqYiOI1DfLOyE_ms
+###
+
+# Test if publisher can add only one bootycamp
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+	"email": "getbooty@gmail.com",
+	"password": "123456"
+}
+###
+
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "bootycamp publisher 2",
+	"email": "getbooty2@gmail.com",
+	"role": "publisher",
+	"password": "123456"
+}
+###
+
+POST http://localhost:5000/api/v1/auth/forgotpassword
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com"
 }
