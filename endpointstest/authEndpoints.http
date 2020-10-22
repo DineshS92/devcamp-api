@@ -28,7 +28,7 @@ POST http://localhost:5000/api/v1/auth/login
 Content-Type: application/json
 
 {
-	"email": "getbooty@gmail.com",
+	"email": "admin@gmail.com",
 	"password": "123456"
 }
 ###
@@ -50,3 +50,33 @@ Content-Type: application/json
 {
   "email": "john@gmail.com"
 }
+###
+
+
+PUT http://localhost:5000/api/v1/auth/resetpassword/c0cd37b1b0487e95c51ea384c04cd054a954e663
+Content-Type: application/json
+
+{
+  "password": "password"
+}
+###
+
+PUT http://localhost:5000/api/v1/auth/updatedetails
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2E1MTRiNWQyYzEyYzc0NDliZTA0NSIsImlhdCI6MTYwMzM3NjM5MCwiZXhwIjoxNjA1OTY4MzkwfQ.YhMstNho151zEYi-w7Y7dtaqvt28O4th6DGcoAHQy2k
+
+{
+  "name": "John Dope",
+  "email": "john@gmail.com"
+}
+###
+
+PUT http://localhost:5000/api/v1/auth/updatepassword
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkN2E1MTRiNWQyYzEyYzc0NDliZTA0NSIsImlhdCI6MTYwMzM3NjM5MCwiZXhwIjoxNjA1OTY4MzkwfQ.YhMstNho151zEYi-w7Y7dtaqvt28O4th6DGcoAHQy2k
+
+{
+  "currentPassword": "password",
+  "newPassword": "aVerySecurePassword"
+}
+
